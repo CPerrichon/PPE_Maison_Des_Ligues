@@ -21,5 +21,60 @@ namespace PPE_Maison_Des_Ligues
         {
 
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void buttonCreateParticipant_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPrenom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAdresse_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxAtelier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxBenevole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

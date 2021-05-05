@@ -29,6 +29,7 @@ namespace PPE_Maison_Des_Ligues
         public void deconnecter()
         {
             connexion.Close();
+
         }
     }
 }
