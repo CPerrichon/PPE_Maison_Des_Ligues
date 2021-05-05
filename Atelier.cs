@@ -16,6 +16,9 @@ namespace PPE_Maison_Des_Ligues
         private DateTime fin;
         private int idParticipant;
         #endregion
+
+        #region Constructeur
+
         public Atelier(int numAtelier, string libelleAtelier, int capaciteMax, DateTime debut, DateTime fin, int idParticipant)
         {
             this.NumAtelier = numAtelier;
@@ -26,8 +29,6 @@ namespace PPE_Maison_Des_Ligues
             this.IdParticipant = idParticipant;
         }
 
-        #region Accesseurs
-
         public int NumAtelier { get => numAtelier; set => numAtelier = value; }
         public string LibelleAtelier { get => libelleAtelier; set => libelleAtelier = value; }
         public int CapaciteMax { get => capaciteMax; set => capaciteMax = value; }
@@ -37,3 +38,4 @@ namespace PPE_Maison_Des_Ligues
         #endregion
     }
 }
+#endregion

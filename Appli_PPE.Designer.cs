@@ -54,8 +54,8 @@ namespace PPE_Maison_Des_Ligues
             this.comboBoxBenevole = new System.Windows.Forms.ComboBox();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.tabAtelier = new System.Windows.Forms.TabPage();
-            this.dgvAtelier = new System.Windows.Forms.DataGridView();
             this.cbxAtelier = new System.Windows.Forms.ComboBox();
+            this.dgvAtelier = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabAtelier.SuspendLayout();
@@ -64,6 +64,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -86,11 +87,11 @@ namespace PPE_Maison_Des_Ligues
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1224, 639);
+            this.tabPage1.Size = new System.Drawing.Size(1224, 632);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -118,11 +119,11 @@ namespace PPE_Maison_Des_Ligues
             this.tabPage2.Controls.Add(this.comboBoxBenevole);
             this.tabPage2.Controls.Add(this.comboBoxType);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1224, 639);
+            this.tabPage2.Size = new System.Drawing.Size(1224, 632);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -131,20 +132,18 @@ namespace PPE_Maison_Des_Ligues
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(53, 336);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(95, 517);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(372, 17);
+            this.label11.Size = new System.Drawing.Size(508, 25);
             this.label11.TabIndex = 21;
             this.label11.Text = "* les informations suivies d\'un astérisque sont obligatoires";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(63, 67);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(94, 103);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(336, 24);
+            this.label10.Size = new System.Drawing.Size(509, 32);
             this.label10.TabIndex = 20;
             this.label10.Text = "Informations à remplir pour l\'inscription:";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -152,147 +151,138 @@ namespace PPE_Maison_Des_Ligues
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(282, 163);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(423, 251);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 24);
+            this.label6.Size = new System.Drawing.Size(95, 32);
             this.label6.TabIndex = 19;
-            this.label6.Text = "email";
+            this.label6.Text = "email*";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(589, 222);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(809, 327);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 24);
+            this.label9.Size = new System.Drawing.Size(284, 32);
             this.label9.TabIndex = 18;
-            this.label9.Text = "Bénévole?";
+            this.label9.Text = "A choisir si bénévole:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(589, 163);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(884, 251);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 24);
+            this.label8.Size = new System.Drawing.Size(108, 32);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Atelier";
+            this.label8.Text = "Atelier*";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(589, 103);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(884, 158);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 24);
+            this.label7.Size = new System.Drawing.Size(89, 32);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Type";
+            this.label7.Text = "Type*";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(282, 103);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(423, 158);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 24);
+            this.label5.Size = new System.Drawing.Size(162, 32);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Téléphone";
+            this.label5.Text = "Téléphone*";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 222);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(94, 342);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 24);
+            this.label4.Size = new System.Drawing.Size(130, 32);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Adresse";
+            this.label4.Text = "Adresse*";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 163);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(94, 251);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 24);
+            this.label3.Size = new System.Drawing.Size(125, 32);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Prénom";
+            this.label3.Text = "Prénom*";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 103);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(94, 158);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 24);
+            this.label2.Size = new System.Drawing.Size(85, 32);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Nom";
+            this.label2.Text = "Nom*";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Red;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(204, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(306, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(387, 29);
+            this.label1.Size = new System.Drawing.Size(581, 40);
             this.label1.TabIndex = 10;
             this.label1.Text = "Inscription d\'un nouveau participant";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxTel
             // 
-            this.textBoxTel.Location = new System.Drawing.Point(286, 126);
+            this.textBoxTel.Location = new System.Drawing.Point(427, 192);
             this.textBoxTel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(107, 29);
+            this.textBoxTel.Size = new System.Drawing.Size(158, 39);
             this.textBoxTel.TabIndex = 9;
             this.textBoxTel.TextChanged += new System.EventHandler(this.textBoxTel_TextChanged);
             // 
             // textBoxAdresse
             // 
-            this.textBoxAdresse.Location = new System.Drawing.Point(67, 245);
+            this.textBoxAdresse.Location = new System.Drawing.Point(100, 377);
             this.textBoxAdresse.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAdresse.Name = "textBoxAdresse";
-            this.textBoxAdresse.Size = new System.Drawing.Size(107, 29);
+            this.textBoxAdresse.Size = new System.Drawing.Size(158, 39);
             this.textBoxAdresse.TabIndex = 8;
             this.textBoxAdresse.TextChanged += new System.EventHandler(this.textBoxAdresse_TextChanged);
             // 
             // textBoxPrenom
             // 
-            this.textBoxPrenom.Location = new System.Drawing.Point(67, 186);
+            this.textBoxPrenom.Location = new System.Drawing.Point(100, 285);
             this.textBoxPrenom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrenom.Name = "textBoxPrenom";
-            this.textBoxPrenom.Size = new System.Drawing.Size(107, 29);
+            this.textBoxPrenom.Size = new System.Drawing.Size(158, 39);
             this.textBoxPrenom.TabIndex = 7;
             this.textBoxPrenom.TextChanged += new System.EventHandler(this.textBoxPrenom_TextChanged);
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Location = new System.Drawing.Point(67, 126);
+            this.textBoxNom.Location = new System.Drawing.Point(100, 192);
             this.textBoxNom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNom.Name = "textBoxNom";
-            this.textBoxNom.Size = new System.Drawing.Size(107, 29);
+            this.textBoxNom.Size = new System.Drawing.Size(158, 39);
             this.textBoxNom.TabIndex = 6;
             this.textBoxNom.TextChanged += new System.EventHandler(this.textBoxNom_TextChanged);
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(286, 186);
+            this.textBoxMail.Location = new System.Drawing.Point(430, 285);
             this.textBoxMail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(107, 29);
+            this.textBoxMail.Size = new System.Drawing.Size(158, 39);
             this.textBoxMail.TabIndex = 5;
             this.textBoxMail.TextChanged += new System.EventHandler(this.textBoxMail_TextChanged);
             // 
             // buttonCreateParticipant
             // 
-            this.buttonCreateParticipant.Location = new System.Drawing.Point(530, 292);
+            this.buttonCreateParticipant.Location = new System.Drawing.Point(796, 450);
             this.buttonCreateParticipant.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCreateParticipant.Name = "buttonCreateParticipant";
-            this.buttonCreateParticipant.Size = new System.Drawing.Size(192, 60);
+            this.buttonCreateParticipant.Size = new System.Drawing.Size(288, 92);
             this.buttonCreateParticipant.TabIndex = 4;
             this.buttonCreateParticipant.Text = "Créer le participant";
             this.buttonCreateParticipant.UseVisualStyleBackColor = true;
@@ -301,30 +291,30 @@ namespace PPE_Maison_Des_Ligues
             // comboBoxAtelier
             // 
             this.comboBoxAtelier.FormattingEnabled = true;
-            this.comboBoxAtelier.Location = new System.Drawing.Point(593, 186);
+            this.comboBoxAtelier.Location = new System.Drawing.Point(890, 285);
             this.comboBoxAtelier.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAtelier.Name = "comboBoxAtelier";
-            this.comboBoxAtelier.Size = new System.Drawing.Size(131, 32);
+            this.comboBoxAtelier.Size = new System.Drawing.Size(194, 40);
             this.comboBoxAtelier.TabIndex = 3;
             this.comboBoxAtelier.SelectedIndexChanged += new System.EventHandler(this.comboBoxAtelier_SelectedIndexChanged);
             // 
             // comboBoxBenevole
             // 
             this.comboBoxBenevole.FormattingEnabled = true;
-            this.comboBoxBenevole.Location = new System.Drawing.Point(593, 245);
+            this.comboBoxBenevole.Location = new System.Drawing.Point(890, 361);
             this.comboBoxBenevole.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBenevole.Name = "comboBoxBenevole";
-            this.comboBoxBenevole.Size = new System.Drawing.Size(131, 32);
+            this.comboBoxBenevole.Size = new System.Drawing.Size(194, 40);
             this.comboBoxBenevole.TabIndex = 2;
             this.comboBoxBenevole.SelectedIndexChanged += new System.EventHandler(this.comboBoxBenevole_SelectedIndexChanged);
             // 
             // comboBoxType
             // 
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(593, 126);
+            this.comboBoxType.Location = new System.Drawing.Point(890, 209);
             this.comboBoxType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(131, 32);
+            this.comboBoxType.Size = new System.Drawing.Size(194, 40);
             this.comboBoxType.TabIndex = 1;
             this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
             // 
@@ -332,32 +322,34 @@ namespace PPE_Maison_Des_Ligues
             // 
             this.tabAtelier.Controls.Add(this.cbxAtelier);
             this.tabAtelier.Controls.Add(this.dgvAtelier);
-            this.tabAtelier.Location = new System.Drawing.Point(4, 22);
+            this.tabAtelier.Location = new System.Drawing.Point(4, 29);
+            this.tabAtelier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabAtelier.Name = "tabAtelier";
-            this.tabAtelier.Size = new System.Drawing.Size(1224, 639);
+            this.tabAtelier.Size = new System.Drawing.Size(1224, 632);
             this.tabAtelier.TabIndex = 2;
             this.tabAtelier.Text = "Atelier";
             this.tabAtelier.UseVisualStyleBackColor = true;
-            // 
-            // dgvAtelier
-            // 
-            this.dgvAtelier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAtelier.Location = new System.Drawing.Point(276, 34);
-            this.dgvAtelier.Name = "dgvAtelier";
-            this.dgvAtelier.Size = new System.Drawing.Size(615, 197);
-            this.dgvAtelier.TabIndex = 0;
             // 
             // cbxAtelier
             // 
             this.cbxAtelier.FormattingEnabled = true;
             this.cbxAtelier.Location = new System.Drawing.Point(309, 287);
             this.cbxAtelier.Name = "cbxAtelier";
-            this.cbxAtelier.Size = new System.Drawing.Size(121, 21);
+            this.cbxAtelier.Size = new System.Drawing.Size(121, 28);
             this.cbxAtelier.TabIndex = 1;
+            // 
+            // dgvAtelier
+            // 
+            this.dgvAtelier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAtelier.Location = new System.Drawing.Point(276, 34);
+            this.dgvAtelier.Name = "dgvAtelier";
+            this.dgvAtelier.RowHeadersWidth = 62;
+            this.dgvAtelier.Size = new System.Drawing.Size(922, 303);
+            this.dgvAtelier.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 661);
             this.Controls.Add(this.tabControl1);
