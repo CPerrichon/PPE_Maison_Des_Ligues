@@ -13,18 +13,7 @@ namespace PPE_Maison_Des_Ligues
         private string libelleAtelier;
         private int capaciteMax;
         private DateTime debut;
-        private DateTime fin;
         private int idParticipant;
         #endregion
-
-        #region Constructeur
-
-        public Atelier(int unNumAtelier, string unlibelleAtelier, private int unecapaciteMax, DateTime undebut, DateTime unefin, int unidParticipant)
-            {
-                numAtelier = unNumAtelier;
-                libelleAtelier = unLibelleAtelier;
-                
-            }
-
     }
 }
