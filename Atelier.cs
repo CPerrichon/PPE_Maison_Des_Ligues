@@ -19,12 +19,13 @@ namespace PPE_Maison_Des_Ligues
 
         #region Constructeur
 
-        public Atelier(int unNumAtelier, string unlibelleAtelier, private int unecapaciteMax, DateTime undebut, DateTime unefin, int unidParticipant)
+        /*public Atelier(int unNumAtelier, string unlibelleAtelier, private int unecapaciteMax, DateTime undebut, DateTime unefin, int unidParticipant)
             {
                 numAtelier = unNumAtelier;
                 libelleAtelier = unLibelleAtelier;
                 
-            }
+            }*/
 
     }
 }
+#endregion
