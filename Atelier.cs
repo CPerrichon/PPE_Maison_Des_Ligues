@@ -15,6 +15,7 @@ namespace PPE_Maison_Des_Ligues
         private DateTime debut;
         private DateTime fin;
         private int idParticipant;
+        private List<Atelier> lesAteliers;
         #endregion
 
         #region Constructeur
@@ -28,14 +29,24 @@ namespace PPE_Maison_Des_Ligues
             this.Fin = fin;
             this.IdParticipant = idParticipant;
         }
+        #endregion
 
+        #region Accesseurs
         public int NumAtelier { get => numAtelier; set => numAtelier = value; }
         public string LibelleAtelier { get => libelleAtelier; set => libelleAtelier = value; }
         public int CapaciteMax { get => capaciteMax; set => capaciteMax = value; }
         public DateTime Debut { get => debut; set => debut = value; }
         public DateTime Fin { get => fin; set => fin = value; }
         public int IdParticipant { get => idParticipant; set => idParticipant = value; }
+        internal List<Atelier> LesAteliers { get => lesAteliers; set => lesAteliers = value; }
+        #endregion
+
+        #region Méthodes publiques
+
+        public static List<Atelier> listeAteliers() 
+        {
+            return DAOAtelier.getAllAteliers();
+        }
         #endregion
     }
 }
-#endregion
