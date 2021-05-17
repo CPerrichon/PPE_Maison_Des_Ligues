@@ -64,6 +64,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeParticipant.cs" />
     <EmbeddedResource Include="APPLI_PPE.resx">
       <DependentUpon>APPLI_PPE.cs</DependentUpon>
     </EmbeddedResource>
