@@ -57,6 +57,7 @@
       <DependentUpon>APPLI_PPE.cs</DependentUpon>
     </Compile>
     <Compile Include="DAOHorrairesBenevoles.cs" />
+    <Compile Include="DAOTypeParticipant.cs" />
     <Compile Include="HorrairesBenevoles.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
