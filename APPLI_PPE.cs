@@ -15,9 +15,12 @@ namespace PPE_Maison_Des_Ligues
         public Form1()
         {
             InitializeComponent();
-            //abunda
+            
         }
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
         #region Evenements
         private void button1_Click(object sender, EventArgs e)
         {
@@ -79,5 +82,7 @@ namespace PPE_Maison_Des_Ligues
 
         }
         #endregion
+
+        
     }
 }

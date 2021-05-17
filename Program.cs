@@ -16,7 +16,7 @@ namespace PPE_Maison_Des_Ligues
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Login());
         }
     }
 }
