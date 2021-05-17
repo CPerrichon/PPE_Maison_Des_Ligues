@@ -24,8 +24,29 @@ namespace PPE_Maison_Des_Ligues
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            LesAteliers = DAOAtelier.getAllAteliers();
+            LesHorrairesBenevoles = DAOHorrairesBenevoles.getAllHorrairesBenevoles();
+            LesTypesParticipants = DAOTypeParticipant.getAllTypeParticipants();
             
-
+            //Affichage de tout les Ateliers existants dans la bdd dans comboBoxAtelier
+            foreach (var a in LesAteliers)
+            {
+                comboBoxAtelier.Items.Add(a.LibelleAtelier);
+            }
+            
+            //Affichage de tout les Horraires Benevoles existants dans la bdd dans comboBoxBenevole
+            foreach (var h in LesHorrairesBenevoles)
+            {
+                comboBoxBenevole.Items.Add(h.LibelleHorraires);
+            }
+            
+            //Affichage de tout les Types Participants existants dans la bdd dans comboBoxType
+            foreach (var t in LesTypesParticipants)
+            {
+                comboBoxType.Items.Add(t.LibelleType);
+            }
+            
+            
         }
         #region Evenements
         private void button1_Click(object sender, EventArgs e)
