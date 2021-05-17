@@ -47,12 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Atelier.cs" />
+    <Compile Include="DAOAtelier.cs" />
     <Compile Include="DAOFactory.cs" />
-    <Compile Include="Appli_PPE.cs">
+    <Compile Include="APPLI_PPE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Appli_PPE.Designer.cs">
-      <DependentUpon>Appli_PPE.cs</DependentUpon>
+    <Compile Include="APPLI_PPE.Designer.cs">
+      <DependentUpon>APPLI_PPE.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -62,8 +63,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Appli_PPE.resx">
-      <DependentUpon>Appli_PPE.cs</DependentUpon>
+    <EmbeddedResource Include="APPLI_PPE.resx">
+      <DependentUpon>APPLI_PPE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

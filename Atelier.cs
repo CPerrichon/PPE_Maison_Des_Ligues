@@ -15,17 +15,38 @@ namespace PPE_Maison_Des_Ligues
         private DateTime debut;
         private DateTime fin;
         private int idParticipant;
+        private List<Atelier> lesAteliers;
         #endregion
 
         #region Constructeur
 
-        /*public Atelier(int unNumAtelier, string unlibelleAtelier, private int unecapaciteMax, DateTime undebut, DateTime unefin, int unidParticipant)
-            {
-                numAtelier = unNumAtelier;
-                libelleAtelier = unLibelleAtelier;
-                
-            }*/
+        public Atelier(int numAtelier, string libelleAtelier, int capaciteMax, DateTime debut, DateTime fin, int idParticipant)
+        {
+            this.NumAtelier = numAtelier;
+            this.LibelleAtelier = libelleAtelier;
+            this.CapaciteMax = capaciteMax;
+            this.Debut = debut;
+            this.Fin = fin;
+            this.IdParticipant = idParticipant;
+        }
+        #endregion
 
+        #region Accesseurs
+        public int NumAtelier { get => numAtelier; set => numAtelier = value; }
+        public string LibelleAtelier { get => libelleAtelier; set => libelleAtelier = value; }
+        public int CapaciteMax { get => capaciteMax; set => capaciteMax = value; }
+        public DateTime Debut { get => debut; set => debut = value; }
+        public DateTime Fin { get => fin; set => fin = value; }
+        public int IdParticipant { get => idParticipant; set => idParticipant = value; }
+        internal List<Atelier> LesAteliers { get => lesAteliers; set => lesAteliers = value; }
+        #endregion
+
+        #region Méthodes publiques
+
+        public static List<Atelier> listeAteliers() 
+        {
+            return DAOAtelier.getAllAteliers();
+        }
+        #endregion
     }
 }
-#endregion
