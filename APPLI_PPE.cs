@@ -12,6 +12,10 @@ namespace PPE_Maison_Des_Ligues
 {
     public partial class Form1 : Form
     {
+        public List<Atelier> LesAteliers = new List<Atelier>();
+        public List<HorrairesBenevoles> LesHorrairesBenevoles = new List<HorrairesBenevoles>();
+        public List<TypeParticipant> LesTypesParticipants = new List<TypeParticipant>();
+        
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +23,9 @@ namespace PPE_Maison_Des_Ligues
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+
             
+
         }
         #region Evenements
         private void button1_Click(object sender, EventArgs e)
