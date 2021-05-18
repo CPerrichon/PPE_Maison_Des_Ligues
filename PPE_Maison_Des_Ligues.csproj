@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddParticipant.cs" />
     <Compile Include="Atelier.cs" />
     <Compile Include="Connect.cs" />
     <Compile Include="DAOAtelier.cs" />

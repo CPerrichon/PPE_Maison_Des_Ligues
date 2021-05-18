@@ -10,7 +10,7 @@
         private int idType;
         private string adresse;
         private string mail;
-        private float numPortable;
+        private string numPortable;
         private int idAtelier;
         private int idHorraireBenevoles;
 
@@ -19,7 +19,7 @@
 
         #region Constructeur
 
-        public Participant(int id, string nom, string prenom, int idType, string adresse, string mail, float numPortable, int idAtelier, int idHorraireBenevoles)
+        public Participant(int id, string nom, string prenom, int idType, string adresse, string mail, string numPortable, int idAtelier, int idHorraireBenevoles)
         {
             this.id = id;
             this.nom = nom;
@@ -72,7 +72,7 @@
             set => mail = value;
         }
 
-        public float NumPortable
+        public string NumPortable
         {
             get => numPortable;
             set => numPortable = value;
@@ -91,5 +91,12 @@
         }
 
         #endregion
+
+        #region Méthodes
+
+        
+
+        #endregion
+        
     }
 }

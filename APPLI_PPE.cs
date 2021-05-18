@@ -23,6 +23,10 @@ namespace PPE_Maison_Des_Ligues
             InitializeComponent();
             
         }
+        
+        
+        
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -47,8 +51,9 @@ namespace PPE_Maison_Des_Ligues
             {
                 comboBoxType.Items.Add(t.LibelleType);
             }
-            
-            
+
+            refreshDgvParticipant();
+
         }
         #region Evenements
         private void button1_Click(object sender, EventArgs e)
@@ -113,6 +118,7 @@ namespace PPE_Maison_Des_Ligues
         
         private void dgvParticipant_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             LesParticipants = DAOParticipant.getAllParticipants();
 
             foreach (var p in LesParticipants)
@@ -120,6 +126,63 @@ namespace PPE_Maison_Des_Ligues
                 dgvParticipant.Rows.Add(p.Id,p.Nom,p.Prenom,p.IdType,p.Adresse,p.Mail,p.NumPortable,p.IdAtelier,p.IdHorraireBenevoles);
             }
         }
+        
         #endregion
+        
+        public void refreshDgvParticipant()
+        {
+            dgvParticipant.Rows.Clear();
+            List<Participant> LesParticipants = DAOParticipant.getAllParticipants();
+
+            foreach (var p in LesParticipants)
+            {
+                dgvParticipant.Rows.Add(p.Id,p.Nom,p.Prenom, GetLibForType(p.IdType),p.Adresse,p.Mail,p.NumPortable,GetLibForAtelier(p.IdAtelier),GetLibForHorraireBenevoles(p.IdHorraireBenevoles));
+            }
+        }
+        
+        //Remplacer dans le dgv idType par LibelleType
+        private string GetLibForType(int type)
+        {
+
+            foreach (var t in this.LesTypesParticipants)
+            {
+                if (t.IdType == type)
+                {
+                    return t.LibelleType;
+                } 
+            }
+
+            return "Type Inexistant";
+        }
+        
+        //Remplacer dans le dgv idAtelier par LibelleAtelier
+        private string GetLibForAtelier(int atelier)
+        {
+
+            foreach (var a in this.LesAteliers)
+            {
+                if ( a.NumAtelier== atelier)
+                {
+                    return a.LibelleAtelier;
+                } 
+            }
+
+            return "Atelier Inexistant";
+        }
+        
+        //Remplacer dans le dgv idHorraire par LibelleHorraire
+        private string GetLibForHorraireBenevoles(int Horraire)
+        {
+
+            foreach (var h in this.LesHorrairesBenevoles)
+            {
+                if (h.IdHorraires == Horraire)
+                {
+                    return h.LibelleHorraires;
+                } 
+            }
+
+            return "Horraire Inexistante";
+        }
     }
 }

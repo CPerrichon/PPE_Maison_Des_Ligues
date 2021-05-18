@@ -64,7 +64,6 @@ namespace PPE_Maison_Des_Ligues
             this.id_animateur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvParticipant = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
             this.idParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +73,7 @@ namespace PPE_Maison_Des_Ligues
             this.numPortableParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idAtelierParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idHorraireBenevolesParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabAtelier.SuspendLayout();
@@ -421,16 +421,6 @@ namespace PPE_Maison_Des_Ligues
             this.dgvParticipant.TabIndex = 2;
             this.dgvParticipant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParticipant_CellContentClick);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label12.Location = new System.Drawing.Point(277, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(661, 55);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Liste de tout les participants:";
-            // 
             // idParticipant
             // 
             this.idParticipant.HeaderText = "id";
@@ -475,6 +465,16 @@ namespace PPE_Maison_Des_Ligues
             // 
             this.idHorraireBenevolesParticipant.HeaderText = "Horraire Benevole";
             this.idHorraireBenevolesParticipant.Name = "idHorraireBenevolesParticipant";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label12.Location = new System.Drawing.Point(277, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(661, 55);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Liste de tout les participants:";
             // 
             // Form1
             // 
