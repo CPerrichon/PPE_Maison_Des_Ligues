@@ -28,7 +28,7 @@ namespace PPE_Maison_Des_Ligues
 
             bool conn = Connect.seConnecter(identifiant, mdp);
 
-            if (txbIdentifiant.Text==null||txbmdp.Text==null)
+            if (txbIdentifiant.Text.Length==0 && txbmdp.Text.Length==0)
             {
                 MessageBox.Show("Entrez un nom d'utilisateur et un mot de passe");
             }

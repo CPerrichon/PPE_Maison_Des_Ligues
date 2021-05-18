@@ -63,6 +63,7 @@ namespace PPE_Maison_Des_Ligues
             comboBoxAtelier.SelectedIndex = 0;
             comboBoxBenevole.SelectedIndex = 2;
             
+            //refresh bdd
             refreshDgvParticipant();
 
         }
@@ -108,7 +109,7 @@ namespace PPE_Maison_Des_Ligues
                 MessageBox.Show("Tout les champs doivent être remplies");
             }
             
-            
+            //refresh bdd
             refreshDgvParticipant();
 
         }
