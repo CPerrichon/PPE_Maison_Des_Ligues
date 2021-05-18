@@ -34,6 +34,13 @@ namespace PPE_Maison_Des_Ligues
             return lesParticipants;
         }
 
-        
+        public static void AjouterParticipant(string unNom, string unPrenom, int unIdType, string uneAdresse, string unMail,
+            string unNumPortable, int unIdAtelier, int unIdHorraireBenevoles)
+        {
+            DAOFactory daoAddP = new DAOFactory();
+            daoAddP.connecter();
+            string req = "INSERT INTO participant (nom, prenom, idtype, adresse, mail, numPortable, idAtelier, idHorraireBenevoles) VALUES ('" + unNom + "','" + unPrenom + "','" + unIdType + "','" + uneAdresse + "','" + unMail + "','" + unNumPortable + "','" + unIdAtelier + "','" + unIdHorraireBenevoles + "')";
+            daoAddP.execSQLWrite(req);
+        }
     }
 }

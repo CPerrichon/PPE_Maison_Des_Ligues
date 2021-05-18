@@ -12,11 +12,14 @@ namespace PPE_Maison_Des_Ligues
 {
     public partial class Form1 : Form
     {
+        
+        //Déclaration des listes
         public List<Atelier> LesAteliers = new List<Atelier>();
         public List<HorrairesBenevoles> LesHorrairesBenevoles = new List<HorrairesBenevoles>();
         public List<TypeParticipant> LesTypesParticipants = new List<TypeParticipant>();
         public List<Participant> LesParticipants = new List<Participant>();
-
+        
+        
         
         public Form1()
         {
@@ -29,11 +32,13 @@ namespace PPE_Maison_Des_Ligues
         
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //Remplissage des listes
             LesAteliers = DAOAtelier.getAllAteliers();
             LesHorrairesBenevoles = DAOHorrairesBenevoles.getAllHorrairesBenevoles();
             LesTypesParticipants = DAOTypeParticipant.getAllTypeParticipants();
+
             
+
             //Affichage de tout les Ateliers existants dans la bdd dans comboBoxAtelier
             foreach (var a in LesAteliers)
             {
@@ -43,6 +48,7 @@ namespace PPE_Maison_Des_Ligues
             //Affichage de tout les Horraires Benevoles existants dans la bdd dans comboBoxBenevole
             foreach (var h in LesHorrairesBenevoles)
             {
+                
                 comboBoxBenevole.Items.Add(h.LibelleHorraires);
             }
             
@@ -51,7 +57,12 @@ namespace PPE_Maison_Des_Ligues
             {
                 comboBoxType.Items.Add(t.LibelleType);
             }
-
+            
+            //Les Cbx pointent sur leur première valeur(= pas de valeurs NULL)
+            comboBoxType.SelectedIndex = 0;
+            comboBoxAtelier.SelectedIndex = 0;
+            comboBoxBenevole.SelectedIndex = 2;
+            
             refreshDgvParticipant();
 
         }
@@ -66,11 +77,44 @@ namespace PPE_Maison_Des_Ligues
 
         }
 
+        #region Ajout Participant
+        
         private void buttonCreateParticipant_Click(object sender, EventArgs e)
         {
+            string addnom = textBoxNom.Text;
+            string addprenom = textBoxPrenom.Text;
+            int addtype = GetIdForType(comboBoxType.SelectedItem.ToString());
+            string addadresse = textBoxAdresse.Text;
+            string addmail = textBoxMail.Text;
+            string addnumTel = textBoxTel.Text;
+            int addatelier = GetIdForAtelier(comboBoxAtelier.SelectedItem.ToString());
+            int addhorraire = GetIdForHorraireBenevoles(comboBoxBenevole.SelectedItem.ToString());
+
+            if (textBoxNom.Text.Length != 0 && textBoxPrenom.Text.Length != 0 && textBoxAdresse.Text.Length != 0 && textBoxMail.Text.Length != 0 && textBoxTel.Text.Length != 0)
+            {
+                if (textBoxTel.Text.Length == 10)
+                {
+                   
+                    DAOParticipant.AjouterParticipant(addnom, addprenom, addtype, addadresse, addmail, addnumTel,
+                        addatelier, addhorraire);
+                }
+                else
+                {
+                    MessageBox.Show("Le numéro de téléphone doit être composé de 10 caractère numériques");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tout les champs doivent être remplies");
+            }
+            
+            
+            refreshDgvParticipant();
 
         }
-
+        
+        #endregion
+        
         private void textBoxNom_TextChanged(object sender, EventArgs e)
         {
 
@@ -119,15 +163,64 @@ namespace PPE_Maison_Des_Ligues
         private void dgvParticipant_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            LesParticipants = DAOParticipant.getAllParticipants();
-
-            foreach (var p in LesParticipants)
-            {
-                dgvParticipant.Rows.Add(p.Id,p.Nom,p.Prenom,p.IdType,p.Adresse,p.Mail,p.NumPortable,p.IdAtelier,p.IdHorraireBenevoles);
-            }
+           
         }
         
         #endregion
+        
+        #region méthodes supplémentaires Tanguy
+
+        //ComboBox
+        
+        //Remplace la valeur string type combobox par la valeur int type correspondante
+        private int GetIdForType(string type)
+        {
+
+            foreach (var t in this.LesTypesParticipants)
+            {
+                if (t.LibelleType == type)
+                {
+                    return t.IdType;
+                } 
+            }
+
+            return 0;
+
+        }
+        
+        //Remplace la valeur string atelier combobox par la valeur int atelier correspondante
+        private int GetIdForAtelier(string atelier)
+        {
+
+            foreach (var a in this.LesAteliers)
+            {
+                if (a.LibelleAtelier == atelier)
+                {
+                    return a.NumAtelier;
+                } 
+            }
+
+            return 0;
+
+        }
+        
+        //Remplace la valeur string horraireB combobox par la valeur int horraireB correspondante
+        private int GetIdForHorraireBenevoles(string Horraire)
+        {
+
+            foreach (var h in this.LesHorrairesBenevoles)
+            {
+                if (h.LibelleHorraires == Horraire)
+                {
+                    return h.IdHorraires;
+                } 
+            }
+
+            return 0;
+
+        }
+
+        //DGV 
         
         public void refreshDgvParticipant()
         {
@@ -184,5 +277,8 @@ namespace PPE_Maison_Des_Ligues
 
             return "Horraire Inexistante";
         }
+
+        #endregion
+        
     }
 }
