@@ -63,10 +63,23 @@ namespace PPE_Maison_Des_Ligues
             this.fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_animateur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvParticipant = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.idParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenomParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTypeParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresseParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mailParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numPortableParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idAtelierParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idHorraireBenevolesParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabAtelier.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dgvAtelier)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvParticipant)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -86,7 +99,7 @@ namespace PPE_Maison_Des_Ligues
             this.tabControl1.Controls.Add(this.tabAtelier);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1232, 665);
@@ -95,9 +108,9 @@ namespace PPE_Maison_Des_Ligues
             // tabPage1
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(1224, 632);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Accueil";
@@ -127,9 +140,9 @@ namespace PPE_Maison_Des_Ligues
             this.tabPage2.Controls.Add(this.comboBoxType);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(1224, 632);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Inscription";
@@ -242,7 +255,7 @@ namespace PPE_Maison_Des_Ligues
             // textBoxTel
             // 
             this.textBoxTel.Location = new System.Drawing.Point(428, 192);
-            this.textBoxTel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(158, 39);
             this.textBoxTel.TabIndex = 9;
@@ -251,7 +264,7 @@ namespace PPE_Maison_Des_Ligues
             // textBoxAdresse
             // 
             this.textBoxAdresse.Location = new System.Drawing.Point(100, 377);
-            this.textBoxAdresse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxAdresse.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(158, 39);
             this.textBoxAdresse.TabIndex = 8;
@@ -260,7 +273,7 @@ namespace PPE_Maison_Des_Ligues
             // textBoxPrenom
             // 
             this.textBoxPrenom.Location = new System.Drawing.Point(100, 285);
-            this.textBoxPrenom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrenom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrenom.Name = "textBoxPrenom";
             this.textBoxPrenom.Size = new System.Drawing.Size(158, 39);
             this.textBoxPrenom.TabIndex = 7;
@@ -269,7 +282,7 @@ namespace PPE_Maison_Des_Ligues
             // textBoxNom
             // 
             this.textBoxNom.Location = new System.Drawing.Point(100, 192);
-            this.textBoxNom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(158, 39);
             this.textBoxNom.TabIndex = 6;
@@ -278,7 +291,7 @@ namespace PPE_Maison_Des_Ligues
             // textBoxMail
             // 
             this.textBoxMail.Location = new System.Drawing.Point(430, 285);
-            this.textBoxMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(158, 39);
             this.textBoxMail.TabIndex = 5;
@@ -287,7 +300,7 @@ namespace PPE_Maison_Des_Ligues
             // buttonCreateParticipant
             // 
             this.buttonCreateParticipant.Location = new System.Drawing.Point(796, 449);
-            this.buttonCreateParticipant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCreateParticipant.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCreateParticipant.Name = "buttonCreateParticipant";
             this.buttonCreateParticipant.Size = new System.Drawing.Size(288, 92);
             this.buttonCreateParticipant.TabIndex = 4;
@@ -299,7 +312,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             this.comboBoxAtelier.FormattingEnabled = true;
             this.comboBoxAtelier.Location = new System.Drawing.Point(890, 285);
-            this.comboBoxAtelier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxAtelier.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAtelier.Name = "comboBoxAtelier";
             this.comboBoxAtelier.Size = new System.Drawing.Size(194, 40);
             this.comboBoxAtelier.TabIndex = 3;
@@ -309,7 +322,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             this.comboBoxBenevole.FormattingEnabled = true;
             this.comboBoxBenevole.Location = new System.Drawing.Point(890, 362);
-            this.comboBoxBenevole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBenevole.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBenevole.Name = "comboBoxBenevole";
             this.comboBoxBenevole.Size = new System.Drawing.Size(194, 40);
             this.comboBoxBenevole.TabIndex = 2;
@@ -319,7 +332,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             this.comboBoxType.FormattingEnabled = true;
             this.comboBoxType.Location = new System.Drawing.Point(890, 209);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(194, 40);
             this.comboBoxType.TabIndex = 1;
@@ -387,6 +400,8 @@ namespace PPE_Maison_Des_Ligues
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dgvParticipant);
+            this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -394,6 +409,72 @@ namespace PPE_Maison_Des_Ligues
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Participant";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgvParticipant
+            // 
+            this.dgvParticipant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvParticipant.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.idParticipant, this.nomParticipant, this.prenomParticipant, this.idTypeParticipant, this.adresseParticipant, this.mailParticipant, this.numPortableParticipant, this.idAtelierParticipant, this.idHorraireBenevolesParticipant});
+            this.dgvParticipant.Location = new System.Drawing.Point(127, 88);
+            this.dgvParticipant.Name = "dgvParticipant";
+            this.dgvParticipant.RowTemplate.Height = 28;
+            this.dgvParticipant.Size = new System.Drawing.Size(944, 538);
+            this.dgvParticipant.TabIndex = 2;
+            this.dgvParticipant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParticipant_CellContentClick);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label12.Location = new System.Drawing.Point(277, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(661, 55);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Liste de tout les participants:";
+            // 
+            // idParticipant
+            // 
+            this.idParticipant.HeaderText = "id";
+            this.idParticipant.Name = "idParticipant";
+            // 
+            // nomParticipant
+            // 
+            this.nomParticipant.HeaderText = "Nom";
+            this.nomParticipant.Name = "nomParticipant";
+            // 
+            // prenomParticipant
+            // 
+            this.prenomParticipant.HeaderText = "Prenom";
+            this.prenomParticipant.Name = "prenomParticipant";
+            // 
+            // idTypeParticipant
+            // 
+            this.idTypeParticipant.HeaderText = "Type";
+            this.idTypeParticipant.Name = "idTypeParticipant";
+            // 
+            // adresseParticipant
+            // 
+            this.adresseParticipant.HeaderText = "Adresse";
+            this.adresseParticipant.Name = "adresseParticipant";
+            // 
+            // mailParticipant
+            // 
+            this.mailParticipant.HeaderText = "M@il";
+            this.mailParticipant.Name = "mailParticipant";
+            // 
+            // numPortableParticipant
+            // 
+            this.numPortableParticipant.HeaderText = "n°Portable";
+            this.numPortableParticipant.Name = "numPortableParticipant";
+            // 
+            // idAtelierParticipant
+            // 
+            this.idAtelierParticipant.HeaderText = "Atelier";
+            this.idAtelierParticipant.Name = "idAtelierParticipant";
+            // 
+            // idHorraireBenevolesParticipant
+            // 
+            this.idHorraireBenevolesParticipant.HeaderText = "Horraire Benevole";
+            this.idHorraireBenevolesParticipant.Name = "idHorraireBenevolesParticipant";
             // 
             // Form1
             // 
@@ -403,7 +484,7 @@ namespace PPE_Maison_Des_Ligues
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Appli PPE";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -412,9 +493,29 @@ namespace PPE_Maison_Des_Ligues
             this.tabPage2.PerformLayout();
             this.tabAtelier.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dgvAtelier)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvParticipant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn mailParticipant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numPortableParticipant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAtelierParticipant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idHorraireBenevolesParticipant;
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn idParticipant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomParticipant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prenomParticipant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTypeParticipant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresseParticipant;
+
+        private System.Windows.Forms.DataGridView dgvParticipant;
+
+        private System.Windows.Forms.Label label12;
+
+        private System.Windows.Forms.DataGridView dataGridView1;
 
         private System.Windows.Forms.TabPage tabPage3;
 

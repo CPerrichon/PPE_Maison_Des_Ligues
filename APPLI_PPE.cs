@@ -15,6 +15,8 @@ namespace PPE_Maison_Des_Ligues
         public List<Atelier> LesAteliers = new List<Atelier>();
         public List<HorrairesBenevoles> LesHorrairesBenevoles = new List<HorrairesBenevoles>();
         public List<TypeParticipant> LesTypesParticipants = new List<TypeParticipant>();
+        public List<Participant> LesParticipants = new List<Participant>();
+
         
         public Form1()
         {
@@ -108,8 +110,16 @@ namespace PPE_Maison_Des_Ligues
         {
 
         }
-        #endregion
-
         
+        private void dgvParticipant_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LesParticipants = DAOParticipant.getAllParticipants();
+
+            foreach (var p in LesParticipants)
+            {
+                dgvParticipant.Rows.Add(p.Id,p.Nom,p.Prenom,p.IdType,p.Adresse,p.Mail,p.NumPortable,p.IdAtelier,p.IdHorraireBenevoles);
+            }
+        }
+        #endregion
     }
 }
