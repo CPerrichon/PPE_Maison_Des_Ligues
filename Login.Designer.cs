@@ -49,7 +49,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(84, 56);
@@ -60,7 +60,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(84, 194);
@@ -78,7 +78,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // btnConnexion
             // 
-            this.btnConnexion.BackColor = System.Drawing.Color.Navy;
+            this.btnConnexion.BackColor = System.Drawing.Color.Black;
             this.btnConnexion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnConnexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnConnexion.ForeColor = System.Drawing.Color.Transparent;

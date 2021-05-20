@@ -152,11 +152,12 @@ namespace PPE_Maison_Des_Ligues
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label11.Location = new System.Drawing.Point(94, 517);
+            this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label11.Location = new System.Drawing.Point(94, 516);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(508, 25);
+            this.label11.Size = new System.Drawing.Size(517, 25);
             this.label11.TabIndex = 21;
-            this.label11.Text = "* les informations suivies d\'un astérisque sont obligatoires";
+            this.label11.Text = "Tous les champs de saisie de cette page sont obligatoires.";
             // 
             // label10
             // 
@@ -171,16 +172,16 @@ namespace PPE_Maison_Des_Ligues
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(423, 251);
+            this.label6.Location = new System.Drawing.Point(299, 328);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 32);
+            this.label6.Size = new System.Drawing.Size(84, 32);
             this.label6.TabIndex = 19;
-            this.label6.Text = "email*";
+            this.label6.Text = "email";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(808, 328);
+            this.label9.Location = new System.Drawing.Point(808, 343);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(284, 32);
             this.label9.TabIndex = 18;
@@ -189,72 +190,73 @@ namespace PPE_Maison_Des_Ligues
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(884, 251);
+            this.label8.Location = new System.Drawing.Point(884, 240);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 32);
+            this.label8.Size = new System.Drawing.Size(97, 32);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Atelier*";
+            this.label8.Text = "Atelier";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(884, 158);
+            this.label7.Location = new System.Drawing.Point(884, 124);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 32);
+            this.label7.Size = new System.Drawing.Size(78, 32);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Type*";
+            this.label7.Text = "Type";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(423, 158);
+            this.label5.Location = new System.Drawing.Point(299, 235);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 32);
+            this.label5.Size = new System.Drawing.Size(151, 32);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Téléphone*";
+            this.label5.Text = "Téléphone";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(94, 342);
+            this.label4.Location = new System.Drawing.Point(92, 371);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 32);
+            this.label4.Size = new System.Drawing.Size(119, 32);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Adresse*";
+            this.label4.Text = "Adresse";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 251);
+            this.label3.Location = new System.Drawing.Point(92, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 32);
+            this.label3.Size = new System.Drawing.Size(114, 32);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Prénom*";
+            this.label3.Text = "Prénom";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 158);
+            this.label2.Location = new System.Drawing.Point(92, 187);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 32);
+            this.label2.Size = new System.Drawing.Size(74, 32);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Nom*";
+            this.label2.Text = "Nom";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Red;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(306, 25);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.Location = new System.Drawing.Point(180, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(581, 40);
+            this.label1.Size = new System.Drawing.Size(874, 43);
             this.label1.TabIndex = 10;
             this.label1.Text = "Inscription d\'un nouveau participant";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxTel
             // 
-            this.textBoxTel.Location = new System.Drawing.Point(428, 192);
+            this.textBoxTel.Location = new System.Drawing.Point(304, 269);
             this.textBoxTel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(158, 39);
@@ -263,7 +265,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // textBoxAdresse
             // 
-            this.textBoxAdresse.Location = new System.Drawing.Point(100, 377);
+            this.textBoxAdresse.Location = new System.Drawing.Point(98, 406);
             this.textBoxAdresse.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(158, 39);
@@ -272,7 +274,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // textBoxPrenom
             // 
-            this.textBoxPrenom.Location = new System.Drawing.Point(100, 285);
+            this.textBoxPrenom.Location = new System.Drawing.Point(98, 314);
             this.textBoxPrenom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrenom.Name = "textBoxPrenom";
             this.textBoxPrenom.Size = new System.Drawing.Size(158, 39);
@@ -281,7 +283,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Location = new System.Drawing.Point(100, 192);
+            this.textBoxNom.Location = new System.Drawing.Point(98, 221);
             this.textBoxNom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(158, 39);
@@ -290,7 +292,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(430, 285);
+            this.textBoxMail.Location = new System.Drawing.Point(306, 362);
             this.textBoxMail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(158, 39);
@@ -311,7 +313,7 @@ namespace PPE_Maison_Des_Ligues
             // comboBoxAtelier
             // 
             this.comboBoxAtelier.FormattingEnabled = true;
-            this.comboBoxAtelier.Location = new System.Drawing.Point(890, 285);
+            this.comboBoxAtelier.Location = new System.Drawing.Point(890, 284);
             this.comboBoxAtelier.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAtelier.Name = "comboBoxAtelier";
             this.comboBoxAtelier.Size = new System.Drawing.Size(194, 40);
@@ -321,7 +323,7 @@ namespace PPE_Maison_Des_Ligues
             // comboBoxBenevole
             // 
             this.comboBoxBenevole.FormattingEnabled = true;
-            this.comboBoxBenevole.Location = new System.Drawing.Point(890, 362);
+            this.comboBoxBenevole.Location = new System.Drawing.Point(890, 377);
             this.comboBoxBenevole.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBenevole.Name = "comboBoxBenevole";
             this.comboBoxBenevole.Size = new System.Drawing.Size(194, 40);
@@ -331,7 +333,7 @@ namespace PPE_Maison_Des_Ligues
             // comboBoxType
             // 
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(890, 209);
+            this.comboBoxType.Location = new System.Drawing.Point(890, 175);
             this.comboBoxType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(194, 40);
@@ -414,7 +416,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             this.dgvParticipant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvParticipant.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.idParticipant, this.nomParticipant, this.prenomParticipant, this.idTypeParticipant, this.adresseParticipant, this.mailParticipant, this.numPortableParticipant, this.idAtelierParticipant, this.idHorraireBenevolesParticipant});
-            this.dgvParticipant.Location = new System.Drawing.Point(127, 88);
+            this.dgvParticipant.Location = new System.Drawing.Point(124, 91);
             this.dgvParticipant.Name = "dgvParticipant";
             this.dgvParticipant.RowTemplate.Height = 28;
             this.dgvParticipant.Size = new System.Drawing.Size(944, 538);
@@ -469,10 +471,10 @@ namespace PPE_Maison_Des_Ligues
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label12.Location = new System.Drawing.Point(277, 16);
+            this.label12.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label12.Location = new System.Drawing.Point(337, 23);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(661, 55);
+            this.label12.Size = new System.Drawing.Size(491, 48);
             this.label12.TabIndex = 1;
             this.label12.Text = "Liste de tout les participants:";
             // 

@@ -12,7 +12,7 @@ namespace PPE_Maison_Des_Ligues
 {
     public partial class Form1 : Form
     {
-        
+       
         //Déclaration des listes
         public List<Atelier> LesAteliers = new List<Atelier>();
         public List<HorrairesBenevoles> LesHorrairesBenevoles = new List<HorrairesBenevoles>();
@@ -20,18 +20,16 @@ namespace PPE_Maison_Des_Ligues
         public List<Participant> LesParticipants = new List<Participant>();
         
         
-        
         public Form1()
         {
             InitializeComponent();
             
         }
-        
-        
-        
+           
         
         private void Form1_Load(object sender, EventArgs e)
         {
+            #region  Load Tanguy
             //Remplissage des listes
             LesAteliers = DAOAtelier.getAllAteliers();
             LesHorrairesBenevoles = DAOHorrairesBenevoles.getAllHorrairesBenevoles();
@@ -65,20 +63,11 @@ namespace PPE_Maison_Des_Ligues
             
             //refresh bdd
             refreshDgvParticipant();
-
-        }
-        #region Evenements
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            #endregion    
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        #region Ajout Participant
+        
+        #region Ajout Participant Tanguy
         
         private void buttonCreateParticipant_Click(object sender, EventArgs e)
         {
@@ -95,13 +84,32 @@ namespace PPE_Maison_Des_Ligues
             {
                 if (textBoxTel.Text.Length == 10)
                 {
-                   
-                    DAOParticipant.AjouterParticipant(addnom, addprenom, addtype, addadresse, addmail, addnumTel,
-                        addatelier, addhorraire);
+                    if (addhorraire == 1 && addtype == 3 || addhorraire == 2 && addtype == 3 ||
+                        addhorraire == 3 && addtype == 1 || addhorraire == 3 && addtype == 2)
+                    {
+                        DAOParticipant.AjouterParticipant(addnom, addprenom, addtype, addadresse, addmail, addnumTel,
+                            addatelier, addhorraire);
+                        
+                        //Message Box de validation
+                        MessageBox.Show("Le participant a correctement été ajouté");
+                        
+                        //Clear des champs de saisis
+                        textBoxAdresse.Clear();
+                        textBoxMail.Clear();
+                        textBoxNom.Clear();
+                        textBoxPrenom.Clear();
+                        textBoxTel.Clear();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur d'attribution des rôles");
+                    }
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Le numéro de téléphone doit être composé de 10 caractère numériques");
+                    MessageBox.Show("Le numéro de téléphone doit être composé de 10 caractères numériques");
                 }
             }
             else
@@ -116,58 +124,6 @@ namespace PPE_Maison_Des_Ligues
         
         #endregion
         
-        private void textBoxNom_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPrenom_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxAdresse_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxTel_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxMail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxAtelier_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxBenevole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-        
-        private void dgvParticipant_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-           
-        }
-        
-        #endregion
         
         #region méthodes supplémentaires Tanguy
 
@@ -279,6 +235,80 @@ namespace PPE_Maison_Des_Ligues
             return "Horraire Inexistante";
         }
 
+        #endregion
+        
+     
+        #region Evenements Non-Utiles
+        
+        
+        
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+        
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+               
+        private void textBoxNom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPrenom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAdresse_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxAtelier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxBenevole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void dgvParticipant_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+           
+        }
+        
         #endregion
         
     }
