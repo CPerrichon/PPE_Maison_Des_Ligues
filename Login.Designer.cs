@@ -41,7 +41,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // txbIdentifiant
             // 
-            this.txbIdentifiant.Location = new System.Drawing.Point(66, 135);
+            this.txbIdentifiant.Location = new System.Drawing.Point(84, 95);
             this.txbIdentifiant.Name = "txbIdentifiant";
             this.txbIdentifiant.Size = new System.Drawing.Size(253, 26);
             this.txbIdentifiant.TabIndex = 0;
@@ -49,8 +49,10 @@ namespace PPE_Maison_Des_Ligues
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(66, 96);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(84, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(253, 23);
             this.label1.TabIndex = 1;
@@ -58,9 +60,10 @@ namespace PPE_Maison_Des_Ligues
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(66, 234);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(84, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(253, 23);
             this.label2.TabIndex = 3;
@@ -68,17 +71,20 @@ namespace PPE_Maison_Des_Ligues
             // 
             // txbmdp
             // 
-            this.txbmdp.Location = new System.Drawing.Point(66, 273);
+            this.txbmdp.Location = new System.Drawing.Point(84, 233);
             this.txbmdp.Name = "txbmdp";
             this.txbmdp.Size = new System.Drawing.Size(253, 26);
             this.txbmdp.TabIndex = 2;
             // 
             // btnConnexion
             // 
-            this.btnConnexion.BackColor = System.Drawing.Color.Blue;
-            this.btnConnexion.Location = new System.Drawing.Point(481, 144);
+            this.btnConnexion.BackColor = System.Drawing.Color.Navy;
+            this.btnConnexion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnConnexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnConnexion.ForeColor = System.Drawing.Color.Transparent;
+            this.btnConnexion.Location = new System.Drawing.Point(84, 326);
             this.btnConnexion.Name = "btnConnexion";
-            this.btnConnexion.Size = new System.Drawing.Size(178, 122);
+            this.btnConnexion.Size = new System.Drawing.Size(253, 59);
             this.btnConnexion.TabIndex = 4;
             this.btnConnexion.Text = "Connexion";
             this.btnConnexion.UseVisualStyleBackColor = false;
@@ -90,12 +96,13 @@ namespace PPE_Maison_Des_Ligues
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(405, 439);
             this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbmdp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbIdentifiant);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
