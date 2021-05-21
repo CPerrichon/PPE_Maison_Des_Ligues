@@ -12,9 +12,16 @@ namespace PPE_Maison_Des_Ligues
 {
     public partial class Form1 : Form
     {
+        private Atelier monAtelier;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            initialiserAtelier();
+            remplirListeAteliers();
         }
 
         #region Evenements
@@ -78,5 +85,27 @@ namespace PPE_Maison_Des_Ligues
 
         }
         #endregion
-    }
-}
+
+        #region Procédures et Fonctions utilisateurs
+
+        private void initialiserAtelier()
+        {
+            monAtelier = new Atelier(1, "test", 10, new DateTime(2021, 5, 6, 8, 30, 52), new DateTime(2021, 5, 6, 8, 30, 52), 1);
+
+            monAtelier.LesAteliers = Atelier.listeAteliers();
+        }
+
+        private void remplirListeAteliers()
+        {
+            dgvAtelier.DataSource = null;
+            dgvAtelier.DataSource = monAtelier.LesAteliers;
+
+            // on redimensionne automatiquement la largeur des colonnes du datagridview
+            dgvAtelier.AutoResizeColumns();
+        }
+
+        
+    } 
+        #endregion
+ }
+
