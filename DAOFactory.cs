@@ -14,7 +14,7 @@ namespace PPE_Maison_Des_Ligues
         public DAOFactory()
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "LAPTOP-KVV6RS2J\\SQLEXPRESS";
+            builder.DataSource = "LAPTOP-FJB9U9UG";
             builder.IntegratedSecurity = true;
             builder.InitialCatalog = "PPE_C";
             Console.WriteLine("Connexion info created : " + builder.ConnectionString);
