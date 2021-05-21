@@ -80,7 +80,9 @@ namespace PPE_Maison_Des_Ligues
             this.idAtelierParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idHorraireBenevolesParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabAtelier.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dgvAtelier)).BeginInit();
@@ -113,6 +115,8 @@ namespace PPE_Maison_Des_Ligues
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
@@ -535,6 +539,15 @@ namespace PPE_Maison_Des_Ligues
             this.label12.TabIndex = 1;
             this.label12.Text = "Liste de tout les participants:";
             // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label13.Location = new System.Drawing.Point(90, 68);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(1047, 50);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Bienvenue sur l\'application de gestion des Assises du Sport Lorrain";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -548,6 +561,7 @@ namespace PPE_Maison_Des_Ligues
             this.Text = "Appli PPE";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabAtelier.ResumeLayout(false);
@@ -558,6 +572,8 @@ namespace PPE_Maison_Des_Ligues
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label label13;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn mailParticipant;
         private System.Windows.Forms.DataGridViewTextBoxColumn numPortableParticipant;
