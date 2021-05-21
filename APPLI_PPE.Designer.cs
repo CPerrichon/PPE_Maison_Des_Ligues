@@ -38,9 +38,6 @@ namespace PPE_Maison_Des_Ligues
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnEnd = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -82,6 +79,7 @@ namespace PPE_Maison_Des_Ligues
             this.idAtelierParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idHorraireBenevolesParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -116,8 +114,6 @@ namespace PPE_Maison_Des_Ligues
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnLogOut);
-            this.tabPage1.Controls.Add(this.btnEnd);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -128,38 +124,6 @@ namespace PPE_Maison_Des_Ligues
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Accueil";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLogOut.Location = new System.Drawing.Point(892, 557);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(159, 64);
-            this.btnLogOut.TabIndex = 2;
-            this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnEnd
-            // 
-            this.btnEnd.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnEnd.Location = new System.Drawing.Point(1057, 557);
-            this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(159, 64);
-            this.btnEnd.TabIndex = 1;
-            this.btnEnd.Text = "Quitter";
-            this.btnEnd.UseVisualStyleBackColor = true;
-            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(96, 111);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(1047, 50);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Bienvenue sur l\'application de gestion des Assises du Sport Lorrain";
             // 
             // tabPage2
             // 
@@ -597,6 +561,15 @@ namespace PPE_Maison_Des_Ligues
             this.label12.TabIndex = 1;
             this.label12.Text = "Liste de tout les participants:";
             // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label13.Location = new System.Drawing.Point(90, 68);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(1047, 50);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Bienvenue sur l\'application de gestion des Assises du Sport Lorrain";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,12 +595,6 @@ namespace PPE_Maison_Des_Ligues
             this.PerformLayout();
 
         }
-
-        private System.Windows.Forms.Button btnLogOut;
-
-        private System.Windows.Forms.Button button1;
-
-        private System.Windows.Forms.Button btnEnd;
 
         private System.Windows.Forms.Label label13;
 

@@ -63,7 +63,6 @@ namespace PPE_Maison_Des_Ligues
             
             //refresh bdd
             refreshDgvParticipant();
-            
             #endregion    
 
             foreach (var a in LesAteliers)
@@ -132,7 +131,6 @@ namespace PPE_Maison_Des_Ligues
         }
         
         #endregion
-        
 
         #region Evenements Utiles Tanguy
         
@@ -166,24 +164,8 @@ namespace PPE_Maison_Des_Ligues
                 MessageBox.Show("Caractères numériques seulement", "erreur", MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
-        
-        //Fermeture de l'application 
-        private void btnEnd_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-        
-        //Déconnexion du compte
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
-            Close();
-            Login reco = new Login();
-            reco.Show();
-        }
 
         #endregion
-        
-        
         #region méthodes supplémentaires Tanguy
 
         //ComboBox
