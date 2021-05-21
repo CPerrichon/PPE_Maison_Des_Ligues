@@ -82,7 +82,7 @@ namespace PPE_Maison_Des_Ligues
 
             if (textBoxNom.Text.Length != 0 && textBoxPrenom.Text.Length != 0 && textBoxAdresse.Text.Length != 0 && textBoxMail.Text.Length != 0 && textBoxTel.Text.Length != 0)
             {
-                if (textBoxTel.Text.Length == 10)
+                if (textBoxTel.Text.Length == 10 )
                 {
                     if (addhorraire == 1 && addtype == 3 || addhorraire == 2 && addtype == 3 ||
                         addhorraire == 3 && addtype == 1 || addhorraire == 3 && addtype == 2)
@@ -103,18 +103,19 @@ namespace PPE_Maison_Des_Ligues
                     }
                     else
                     {
-                        MessageBox.Show("Erreur d'attribution des rôles");
+                        MessageBox.Show("Erreur d'attribution des rôles","erreur",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     }
                     
                 }
                 else
                 {
-                    MessageBox.Show("Le numéro de téléphone doit être composé de 10 caractères numériques");
+                    MessageBox.Show("Le numéro de téléphone doit être composé de 10 caractères numériques","erreur",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    textBoxTel.Clear();
                 }
             }
             else
             {
-                MessageBox.Show("Tout les champs doivent être remplies");
+                MessageBox.Show("Tout les champs doivent être remplies","erreur",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             
             //refresh bdd
@@ -123,8 +124,41 @@ namespace PPE_Maison_Des_Ligues
         }
         
         #endregion
+
+        #region Evenements Utiles Tanguy
         
+        //text box caractères alphabétiques seulement
+        private void textBoxNom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Caractères alphabétiques seulement", "erreur", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+        }
         
+        private void textBoxPrenom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Caractères alphabétiques seulement", "erreur", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+        }
+        
+            
+        //text box caractères numériques seulement
+        
+        private void textBoxTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Caractères numériques seulement", "erreur", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+        }
+
+        #endregion
         #region méthodes supplémentaires Tanguy
 
         //ComboBox
@@ -240,27 +274,9 @@ namespace PPE_Maison_Des_Ligues
      
         #region Evenements Non-Utiles
         
-        
-        
-        
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-        
-        private void label1_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-               
         private void textBoxNom_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBoxPrenom_TextChanged(object sender, EventArgs e)
@@ -282,6 +298,24 @@ namespace PPE_Maison_Des_Ligues
         {
 
         }
+        
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+        
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+               
+        
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -310,6 +344,8 @@ namespace PPE_Maison_Des_Ligues
         }
         
         #endregion
+
+
         
     }
 }

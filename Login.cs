@@ -30,7 +30,7 @@ namespace PPE_Maison_Des_Ligues
 
             if (txbIdentifiant.Text.Length==0 && txbmdp.Text.Length==0)
             {
-                MessageBox.Show("Entrez un nom d'utilisateur et un mot de passe");
+                MessageBox.Show("Entrez un nom d'utilisateur et un mot de passe","erreur",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else
             {
@@ -42,7 +42,7 @@ namespace PPE_Maison_Des_Ligues
                 }
                 else
                 {
-                    MessageBox.Show("Le nom d'utilisateur ou le mot de passe est faux");
+                    MessageBox.Show("Le nom d'utilisateur ou le mot de passe est faux","erreur",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
             }
         }
