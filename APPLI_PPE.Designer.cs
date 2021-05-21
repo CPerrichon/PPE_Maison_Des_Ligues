@@ -83,6 +83,7 @@ namespace PPE_Maison_Des_Ligues
             this.idAtelierParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idHorraireBenevolesParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -391,6 +392,7 @@ namespace PPE_Maison_Des_Ligues
             // 
             // tabAtelier
             // 
+            this.tabAtelier.Controls.Add(this.button1);
             this.tabAtelier.Controls.Add(this.cbxAtelier);
             this.tabAtelier.Controls.Add(this.dgvAtelier);
             this.tabAtelier.Location = new System.Drawing.Point(4, 29);
@@ -574,6 +576,16 @@ namespace PPE_Maison_Des_Ligues
             this.label12.Size = new System.Drawing.Size(491, 48);
             this.label12.TabIndex = 1;
             this.label12.Text = "Liste de tout les participants:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(837, 374);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(269, 58);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
