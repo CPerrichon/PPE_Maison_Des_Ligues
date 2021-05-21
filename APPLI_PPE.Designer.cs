@@ -38,6 +38,8 @@ namespace PPE_Maison_Des_Ligues
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnEnd = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
@@ -80,8 +82,6 @@ namespace PPE_Maison_Des_Ligues
             this.idAtelierParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idHorraireBenevolesParticipant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -116,6 +116,8 @@ namespace PPE_Maison_Des_Ligues
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnLogOut);
+            this.tabPage1.Controls.Add(this.btnEnd);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -127,13 +129,35 @@ namespace PPE_Maison_Des_Ligues
             this.tabPage1.Text = "Accueil";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLogOut.Location = new System.Drawing.Point(892, 557);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(159, 64);
+            this.btnLogOut.TabIndex = 2;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnEnd
+            // 
+            this.btnEnd.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnEnd.Location = new System.Drawing.Point(1057, 557);
+            this.btnEnd.Name = "btnEnd";
+            this.btnEnd.Size = new System.Drawing.Size(159, 64);
+            this.btnEnd.TabIndex = 1;
+            this.btnEnd.Text = "Quitter";
+            this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
+            // 
             // label13
             // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(60, 44);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Location = new System.Drawing.Point(96, 111);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(698, 32);
+            this.label13.Size = new System.Drawing.Size(1047, 50);
             this.label13.TabIndex = 0;
             this.label13.Text = "Bienvenue sur l\'application de gestion des Assises du Sport Lorrain";
             // 
@@ -573,24 +597,6 @@ namespace PPE_Maison_Des_Ligues
             this.label12.TabIndex = 1;
             this.label12.Text = "Liste de tout les participants:";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(139, 270);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd--MM--yyyy--hh--ss";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(345, 236);
-            this.dateTimePicker1.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,6 +622,12 @@ namespace PPE_Maison_Des_Ligues
             this.PerformLayout();
 
         }
+
+        private System.Windows.Forms.Button btnLogOut;
+
+        private System.Windows.Forms.Button button1;
+
+        private System.Windows.Forms.Button btnEnd;
 
         private System.Windows.Forms.Label label13;
 
