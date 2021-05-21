@@ -64,6 +64,11 @@ namespace PPE_Maison_Des_Ligues
             //refresh bdd
             refreshDgvParticipant();
             #endregion    
+
+            foreach (var a in LesAteliers)
+            {
+                dgvAtelier.Rows.Add(a.NumAtelier, a.LibelleAtelier, a.CapaciteMax, a.Debut, a.Fin, a.IdParticipant);
+            }
         }
 
         
@@ -120,6 +125,8 @@ namespace PPE_Maison_Des_Ligues
             
             //refresh bdd
             refreshDgvParticipant();
+
+            
 
         }
         
@@ -271,10 +278,18 @@ namespace PPE_Maison_Des_Ligues
         }
 
         #endregion
-        
-     
+
+
         #region Evenements Non-Utiles
-        
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void dgvAtelier_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
         private void textBoxNom_TextChanged(object sender, EventArgs e)
         {
             
@@ -343,9 +358,11 @@ namespace PPE_Maison_Des_Ligues
             
            
         }
-        
-        #endregion
 
+
+
+
+        #endregion
 
         
     }
